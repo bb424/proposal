@@ -1,4 +1,5 @@
 import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 function createData(
     projectNumber: string,
@@ -52,8 +53,8 @@ export default function SiteSafetyPage() {
               <TableCell>
                 <div>
                   
-                <Button variant="contained" color="success">Create</Button>
-                <Button variant="contained" color="primary">Update</Button>  
+                <Button variant="contained" color="success" component={NavLink} to= '/forms/site-safety-plan/saeftyplanedit'>Create</Button>
+                <Button variant="contained" color="primary" component={NavLink} to= '/forms/site-safety-plan/saeftyplanedit'>Update</Button>  
                 
                 </div>
                 </TableCell>

@@ -1,5 +1,8 @@
 export default function SchedulePage() {
   return (
-    <div>SchedulePage</div>
+    <><h1>Schedule Page</h1>
+    <body> Use Wrike api to display list of projects, add project, etc</body>
+
+</>
   )
 }

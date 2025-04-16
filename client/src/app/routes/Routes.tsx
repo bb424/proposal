@@ -6,11 +6,11 @@ import ContactPage from "../../features/contact/ContactPage";
 import App from "../layout/App";
 import ServiceDetails from "../../features/catalog/ServiceDetails";
 import ProposalPage from "../../features/proposal/ProposalPage";
-import NewProposalPage from "../../features/proposal/NewProposalPage";
 import UpdateProposalPage from "../../features/proposal/UpdateProposalPage";
 import ChangeOrderPage from "../../features/proposal/ChangeOrderPage";
 import AwardedPage from "../../features/proposal/AwardedPage";
 import RiskMatrixPage from "../../features/forms/RiskMatrixPage";
+import EditRiskMatrixPage from "../../features/forms/EditRiskMatrixPage";
 import SiteSafetyPage from "../../features/forms/SiteSafetyPage";
 import FormsPage from "../../features/forms/FormsPage";
 import SafetyTailboardPage from "../../features/forms/SafetyTailboardPage";
@@ -19,6 +19,7 @@ import SchedulePage from "../../features/project-management/SchedulePage";
 import LessonsLearnedPage from "../../features/project-management/LessonsLearnedPage";
 import CommunicationPlanPage from "../../features/project-management/CommunicationPlanPage";
 import ThirdPartyPage from "../../features/procurement/ThirdPartyPage";
+import EditSiteSafetyPage from "../../features/forms/EditSiteSafetyPage";
 
 export const router = createBrowserRouter([
     {
@@ -31,13 +32,15 @@ export const router = createBrowserRouter([
             {path: '/about', element: <AboutPage />},
             {path: '/contact', element: <ContactPage />},
             {path: '/proposal', element: <ProposalPage />},
-            {path: '/proposal/new', element: <NewProposalPage />},
+            {path: '/proposal/new', element: <Catalog />},
             {path: '/proposal/update', element: <UpdateProposalPage />},
             {path: '/proposal/change-order', element: <ChangeOrderPage />},
             {path: '/proposal/awarded', element: <AwardedPage />},
             {path: '/forms', element: <FormsPage />},
             {path: '/forms/risk-matrix', element: <RiskMatrixPage />},
+            {path: '/forms/risk-matrix/riskmatrixedit', element: <EditRiskMatrixPage />},
             {path: '/forms/site-safety-plan', element: <SiteSafetyPage />},
+            {path: '/forms/site-safety-plan/saeftyplanedit', element: <EditSiteSafetyPage />},
             {path: '/forms/safety-tailboard', element: <SafetyTailboardPage />},
             {path: '/project-management', element: <ProjectManagementPage />},
             {path: '/project-management/schedules', element: <SchedulePage />},

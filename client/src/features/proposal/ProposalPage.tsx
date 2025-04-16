@@ -1,6 +1,7 @@
 import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Button } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add'
 import VisibilityIcon from '@mui/icons-material/Visibility'
+import { NavLink } from "react-router-dom";
 
 function createData(
   projectNumber: string,
@@ -24,9 +25,12 @@ const rows = [
   createData('092210.000.00', 'Dominion', 'Dominion', "Staff Augmentation", 3200000.00, "In Approval", false, true, ''),
   createData('023145.000.00', 'Duke Energy Florida', 'Duke Energy Florida', "Bartow Gen Upgrade", 1250000.00, "Open", true, false, 'D'),
 ];
+
+
 export default function ProposalPage() {
   return (
     <>
+      <h1>Proposal Page</h1>
       <h3>Active Opportunities from VantagePoint</h3>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 450 }} aria-label="simple table">
@@ -55,7 +59,7 @@ export default function ProposalPage() {
                 <TableCell>
                   <div>
 
-                    <Button variant="contained" color="primary">Create Proposal</Button>
+                    <Button variant="contained" color="primary" component={NavLink} to='/catalog'>Create Proposal</Button>
 
                   </div>
                 </TableCell>

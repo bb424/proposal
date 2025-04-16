@@ -1,4 +1,5 @@
 import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 function createData(
     projectNumber: string,
@@ -50,7 +51,7 @@ export default function RiskMatrixPage() {
               <TableCell>
                 <div>
                   
-                <Button variant="contained" color="success">Create</Button>
+                <Button variant="contained" color="success" component={NavLink} to= '/forms/risk-matrix/riskmatrixedit'>Create</Button>
                 <Button variant="contained" color="primary">Update</Button>  
                 
                 </div>
