@@ -69,9 +69,9 @@ export default function LeftNavBar({ open }: Props){
         variant="permanent"
         open={open}
         sx={{
-          width: open ? drawerWidth : 60,
+          width: open ? drawerWidth : 80,
           flexShrink: 0,
-          [`& .MuiDrawer-paper`]: { width: open ? drawerWidth : 60, boxSizing: 'border-box' },
+          [`& .MuiDrawer-paper`]: { width: open ? drawerWidth : 80, boxSizing: 'border-box' },
         }}
       >
         <Toolbar />
@@ -80,9 +80,9 @@ export default function LeftNavBar({ open }: Props){
             {links.map(({ title, path, icon, dividerAfter }) => (
               <React.Fragment key={path}>
                 <ListItem>
-                  <ListItemButton component={NavLink} to={path} sx={{ pl: 4 }}>
+                  <ListItemButton component={NavLink} to={path} sx={{ pl: open ? 4 : 1}}>
                     <ListItemIcon>{icon}</ListItemIcon>
-                    <ListItemText primary={title} sx={{ fontSize: '0.75 rem' }} />
+                    {open && <ListItemText primary={title} sx={{ fontSize: '0.75 rem' }} />}
                   </ListItemButton>
                 </ListItem>
                 {dividerAfter && <Divider />}

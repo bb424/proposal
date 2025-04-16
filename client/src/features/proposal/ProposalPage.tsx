@@ -45,7 +45,7 @@ export default function ProposalPage() {
                 key={row.projectNumber}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" >
                   {row.projectNumber}
                 </TableCell>
                 <TableCell>{row.customerName}</TableCell>
@@ -71,14 +71,14 @@ export default function ProposalPage() {
           <TableHead>
             <TableRow>
 
-              <TableCell>Project Number</TableCell>
-              <TableCell>Customer</TableCell>
-              <TableCell>End User</TableCell>
-              <TableCell>Scope</TableCell>
-              <TableCell>Price</TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell>Risk</TableCell>
-              <TableCell>Safety</TableCell>
+              <TableCell align='center'>Project Number</TableCell>
+              <TableCell align='center'>Customer</TableCell>
+              <TableCell align='center'>End User</TableCell>
+              <TableCell align='center'>Scope</TableCell>
+              <TableCell align='center'>Price</TableCell>
+              <TableCell align='center'>Status</TableCell>
+              <TableCell align='center'>Risk</TableCell>
+              <TableCell align='center'>Safety</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -95,10 +95,10 @@ export default function ProposalPage() {
                 <TableCell>{row.scopeName}</TableCell>
                 <TableCell>{row.priceNumber}</TableCell>
                 <TableCell>{row.proposalStatus}</TableCell>
-                <TableCell>
+                <TableCell align='center'>
                   {row.riskStatus ? row.riskLetter : <AddIcon />}
                 </TableCell>
-                <TableCell>
+                <TableCell align='center'>
                   {row.safetyStatus ? <VisibilityIcon /> : <AddIcon />}
                 </TableCell>
                 <TableCell>
